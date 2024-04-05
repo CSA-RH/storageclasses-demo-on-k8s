@@ -1,0 +1,23 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: my-azure-file
+provisioner: file.csi.azure.com
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - uid=0
+  - gid=0
+  - mfsymlinks
+  - cache=strict
+  - actimeo=30
+  - noperm
+parameters:
+  location: eastus
+  secretNamespace: kube-system
+  skuName: Standard_LRS
+  storageAccount: mysuperaroazurefilessa
+  resourceGroup: aro-juanlu-1
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+
