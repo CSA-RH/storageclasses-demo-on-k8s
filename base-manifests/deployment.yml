@@ -18,17 +18,15 @@ spec:
         app: myhttpddeploy
     spec:
       containers:
-      - image: registry.access.redhat.com/ubi9/httpd-24
-        name: httpd-24
-        volumeMounts:
-          - mountPath: /var/www/html/
-            name: www
-        ports:
-        - containerPort: 8080
-        resources: {}
+        - image: registry.access.redhat.com/ubi9/httpd-24
+          name: httpd-24
+          volumeMounts:
+            - mountPath: /var/www/html/
+              name: www
+          ports:
+            - containerPort: 8080
+          resources: {}
       volumes:
         - name: www
           persistentVolumeClaim:
             claimName: www-pvc
-status: {}
-

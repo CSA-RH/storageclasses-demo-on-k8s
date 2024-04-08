@@ -31,4 +31,4 @@ The very first thing we need to do is setup our underlying infrastructure so the
 
 Since we are using Azure products for this particular demo, we will set up a storage account and give permissions to our cluster. It can all be easily done via [this](https://learn.microsoft.com/en-us/azure/openshift/howto-create-a-storageclass#set-up-azure-storage-account) official ARO guide.
 
-### 2) Create a basic deployment, svc... simulating an app
+### 2) Create a basic deployment, svc... simulating the manifests of the app
